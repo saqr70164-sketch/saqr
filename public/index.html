@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <title>نموذج Leads وتوصيات</title>
+  <style>
+    body { font-family: Arial, sans-serif; direction: rtl; padding: 20px; max-width:800px; margin:auto; }
+    label { display:block; margin-top:10px; }
+    input, select, textarea { width:100%; padding:8px; margin-top:4px; }
+    button { margin-top:10px; padding:10px 16px; }
+    .case { border:1px solid #ddd; padding:10px; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h1>أرسل Lead واحصل على توصيات دراسات حالة</h1>
+  <form id="leadForm">
+    <label>الاسم <input id="name" required /></label>
+    <label>البريد الإلكتروني <input id="email" type="email" /></label>
+    <label>الهاتف <input id="phone" /></label>
+    <label>الشركة <input id="company" /></label>
+    <label>القطاع <input id="industry" placeholder="مثال: ecommerce, saas, startup" /></label>
+    <label>حجم الشركة <select id="size_category">
+      <option value="">اختر...</option>
+      <option>startup</option>
+      <option>SMB</option>
+      <option>enterprise</option>
+    </select></label>
+    <label>المشكلة/نقاط الألم <textarea id="pain_points"></textarea></label>
+    <button type="submit">أرسل</button>
+  </form>
+
+  <h2>التوصيات</h2>
+  <div id="recommendations"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
